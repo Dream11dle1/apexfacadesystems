@@ -83,24 +83,30 @@ ul {
 
 .main-nav .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
+.nav-logo {
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
 .nav-logo img {
-    width: 220px;
-    height: auto;
-    transition: width 0.4s ease;
+    height: 48px;
+    width: auto;
+    mix-blend-mode: lighten;
+    transition: height 0.4s ease;
 }
 
 .main-nav.scrolled .nav-logo img {
-    width: 180px;
+    height: 40px;
 }
 
 .nav-menu {
     display: flex;
     align-items: center;
     gap: 4px;
+    margin-left: auto;
 }
 
 .nav-menu > li {
@@ -167,6 +173,11 @@ ul {
 .dropdown a:hover {
     background: var(--light-gray);
     color: var(--brand-blue);
+}
+
+.nav-cta {
+    margin-left: 16px;
+    flex-shrink: 0;
 }
 
 .nav-cta .btn-primary {
@@ -825,6 +836,7 @@ section {
 .footer-about .footer-logo {
     height: 44px;
     margin-bottom: 20px;
+    mix-blend-mode: lighten;
 }
 
 .footer-about p {
