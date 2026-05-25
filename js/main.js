@@ -47,6 +47,56 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     renderContactInfo();
 
+    // ========== HERO SLIDER ==========
+    var sliderSection = document.querySelector('.hero-slider');
+    if (sliderSection) {
+        var slides = sliderSection.querySelectorAll('.slider-slide');
+        var dots = sliderSection.querySelectorAll('.slider-dot');
+        var prevBtn = sliderSection.querySelector('.slider-prev');
+        var nextBtn = sliderSection.querySelector('.slider-next');
+        var currentSlide = 0;
+        var slideCount = slides.length;
+        var autoplayInterval;
+
+        function goToSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            currentSlide = (index + slideCount) % slideCount;
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        }
+
+        function startAutoplay() {
+            autoplayInterval = setInterval(function() {
+                goToSlide(currentSlide + 1);
+            }, 5000);
+        }
+
+        function resetAutoplay() {
+            clearInterval(autoplayInterval);
+            startAutoplay();
+        }
+
+        prevBtn.addEventListener('click', function() {
+            goToSlide(currentSlide - 1);
+            resetAutoplay();
+        });
+
+        nextBtn.addEventListener('click', function() {
+            goToSlide(currentSlide + 1);
+            resetAutoplay();
+        });
+
+        dots.forEach(function(dot) {
+            dot.addEventListener('click', function() {
+                goToSlide(parseInt(this.getAttribute('data-slide')));
+                resetAutoplay();
+            });
+        });
+
+        startAutoplay();
+    }
+
     // ========== MOBILE NAVIGATION ==========
     var navToggle = document.querySelector('.nav-toggle');
     var navMenu = document.querySelector('.nav-menu');
