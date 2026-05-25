@@ -47,18 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     renderContactInfo();
 
-    // ========== STICKY NAV SCROLL ==========
-    var mainNav = document.querySelector('.main-nav');
-    if (mainNav) {
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                mainNav.classList.add('scrolled');
-            } else {
-                mainNav.classList.remove('scrolled');
-            }
-        });
-    }
-
     // ========== MOBILE NAVIGATION ==========
     var navToggle = document.querySelector('.nav-toggle');
     var navMenu = document.querySelector('.nav-menu');
