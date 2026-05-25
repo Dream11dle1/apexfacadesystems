@@ -69,15 +69,18 @@ ul {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 14px 0;
+    padding: 12px 20px;
     z-index: 1000;
-    background: var(--primary-navy);
+    background: var(--white);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.08);
 }
 
 .main-nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 100%;
+    padding: 0;
 }
 
 .nav-logo {
@@ -85,9 +88,12 @@ ul {
 }
 
 .nav-logo img {
-    height: 48px;
+    height: 46px;
     width: auto;
-    mix-blend-mode: lighten;
+}
+
+.nav-logo img[src*="white"] {
+    filter: none;
 }
 
 .nav-right {
@@ -110,7 +116,7 @@ ul {
     padding: 10px 14px;
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--white);
+    color: var(--primary-navy);
     border-radius: var(--radius);
     display: flex;
     align-items: center;
@@ -203,7 +209,7 @@ ul {
 .nav-toggle span {
     width: 24px;
     height: 2.5px;
-    background: var(--white);
+    background: var(--primary-navy);
     border-radius: 2px;
     transition: var(--transition);
 }
@@ -1861,6 +1867,7 @@ section {
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         width: 100%;
         font-size: 0.85rem;
+        color: var(--white);
     }
 
     .dropdown {
