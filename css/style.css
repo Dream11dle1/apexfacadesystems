@@ -538,102 +538,99 @@ section {
     100% { transform: translateX(-50%); }
 }
 
-/* ========== SERVICES NUMBERED ========== */
-.services-numbered {
-    padding: 100px 0;
-    background: var(--white);
+/* ========== SCOPE / SERVICES ========== */
+.scope-section {
+    padding: 80px 5%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.services-header {
+.scope-header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 24px;
-}
-
-.services-subtitle {
-    font-size: 1.1rem;
-    font-style: italic;
-    color: #aaa;
-    font-weight: 400;
-}
-
-.services-title {
-    font-size: 2.4rem;
-    font-weight: 800;
-    color: var(--primary-navy);
-    letter-spacing: -0.5px;
-}
-
-.services-divider {
-    height: 3px;
-    background: var(--brand-blue);
+    align-items: flex-end;
     margin-bottom: 0;
 }
 
-.services-list {
-    border-bottom: 1px solid #e5e5e5;
+.scope-header-left {
+    font-size: 24px;
+    color: #bbb;
+    font-style: italic;
 }
 
-.service-row {
-    display: grid;
-    grid-template-columns: 60px 240px 1fr;
-    gap: 24px;
-    align-items: baseline;
-    padding: 32px 20px;
-    border-top: 1px solid #e5e5e5;
-    transition: background 0.3s ease;
+.scope-header-right {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1B2A4A;
+}
+
+.scope-divider {
+    height: 3px;
+    background: #1A7AE6;
+    margin: 20px 0;
+}
+
+.scope-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 40px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
     cursor: default;
 }
 
-.service-row:hover {
-    background: #f0f6ff;
+.scope-item:hover {
+    background-color: #f0f5ff;
 }
 
-.service-num {
-    font-size: 1rem;
+.scope-number {
+    font-size: 28px;
+    color: #ccc;
+    font-weight: 300;
+    min-width: 80px;
+    flex-shrink: 0;
+}
+
+.scope-name {
+    font-size: 24px;
     font-weight: 700;
-    color: var(--brand-blue);
+    color: #1B2A4A;
+    min-width: 350px;
+    flex-shrink: 0;
 }
 
-.service-name {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--primary-navy);
-    margin: 0;
-}
-
-.service-desc {
-    font-size: 0.95rem;
-    color: var(--medium-gray);
-    line-height: 1.7;
-    margin: 0;
+.scope-desc {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    padding-left: 40px;
 }
 
 @media (max-width: 768px) {
-    .services-header {
+    .scope-header {
         flex-direction: column;
+        align-items: flex-start;
         gap: 8px;
     }
 
-    .services-title {
-        font-size: 1.8rem;
+    .scope-header-right {
+        font-size: 24px;
     }
 
-    .service-row {
-        grid-template-columns: 1fr;
+    .scope-item {
+        flex-direction: column;
         gap: 8px;
         padding: 24px 12px;
     }
 
-    .service-num {
-        font-size: 0.85rem;
+    .scope-name {
+        min-width: auto;
+        font-size: 18px;
     }
 
-    .service-name {
-        font-size: 1.05rem;
+    .scope-desc {
+        padding-left: 0;
+        font-size: 14px;
     }
 }
 
