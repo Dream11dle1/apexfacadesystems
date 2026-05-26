@@ -524,92 +524,14 @@ section {
     background: var(--light-gray);
 }
 
-/* ========== TRUSTED PARTNERS ========== */
-.partners-section {
-    background: #111111;
-    padding: 60px 0;
-    overflow: hidden;
+/* ========== TRUSTED PARTNERS TICKER ========== */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
-.partners-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.partners-label {
-    display: inline-block;
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--brand-blue);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-}
-
-.partners-header h2 {
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--white);
-    letter-spacing: -0.5px;
-}
-
-.ticker-wrap {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.ticker-wrap::before,
-.ticker-wrap::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 80px;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.ticker-wrap::before {
-    left: 0;
-    background: linear-gradient(to right, #111111, transparent);
-}
-
-.ticker-wrap::after {
-    right: 0;
-    background: linear-gradient(to left, #111111, transparent);
-}
-
-.ticker {
-    display: flex;
-    gap: 24px;
-    animation: ticker-scroll 30s linear infinite;
-    width: max-content;
-}
-
-.ticker-wrap:hover .ticker {
+.ticker-wrapper:hover .ticker-track {
     animation-play-state: paused;
-}
-
-.ticker-item {
-    flex-shrink: 0;
-    background: var(--white);
-    color: var(--dark-text);
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    padding: 14px 32px;
-    border-radius: 8px;
-    white-space: nowrap;
-}
-
-@keyframes ticker-scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
 }
 
 /* ========== STATS BAR ========== */
