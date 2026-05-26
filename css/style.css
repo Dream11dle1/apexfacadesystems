@@ -333,7 +333,7 @@ ul {
     bottom: 100px;
     left: 80px;
     z-index: 3;
-    max-width: 700px;
+    max-width: 900px;
 }
 
 .hero-content h1 {
@@ -343,6 +343,7 @@ ul {
     line-height: 1.15;
     margin-bottom: 20px;
     letter-spacing: -1px;
+    white-space: nowrap;
 }
 
 .hero-content p {
@@ -2032,7 +2033,8 @@ section {
     }
 
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        white-space: normal;
     }
 
     .hero-content p {
