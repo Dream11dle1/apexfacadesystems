@@ -2211,5 +2211,5 @@ section {
 .scope-item { display: flex; align-items: flex-start; padding: 40px 20px; border-bottom: 1px solid #e0e0e0; transition: background-color 0.3s ease; }
 .scope-item:hover { background-color: #f0f5ff; }
 .scope-number { font-size: 34px; color: #ccc; font-weight: 300; min-width: 80px; flex-shrink: 0; }
-.scope-name { font-size: 28px; font-weight: 700; color: #1B2A4A; min-width: 300px; flex-shrink: 0; }
+.scope-name { font-size: 28px; font-weight: 700; color: #1B2A4A; min-width: 280px; max-width: 280px; flex-shrink: 0; }
 .scope-desc { font-size: 18px; color: #666; line-height: 1.6; margin-left: 40px; }
