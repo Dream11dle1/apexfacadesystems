@@ -2203,7 +2203,7 @@ section {
 }
 
 /* ========== SCOPE SECTION OVERRIDE (end of file for highest priority) ========== */
-.scope-section { padding: 80px 3%; }
+.scope-section { padding: 80px 40px; max-width: 1200px; margin: 0 auto; }
 .scope-header { display: flex; justify-content: space-between; align-items: flex-end; }
 .scope-header-left { font-size: 28px; color: #bbb; font-style: italic; }
 .scope-header-right { font-size: 42px; font-weight: 700; color: #1B2A4A; }
