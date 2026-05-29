@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ========== SCROLL ANIMATIONS ==========
-    var animatedElements = document.querySelectorAll('.fade-up, .fade-in, .slide-left, .slide-right');
+    var animatedElements = document.querySelectorAll('.fade-up, .fade-in, .slide-left, .slide-right, .service-area-section, .products-section');
 
     var observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
