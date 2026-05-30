@@ -2279,15 +2279,14 @@ section {
     position: relative;
     overflow: hidden;
     padding: 60px 40px;
-    background: linear-gradient(180deg, #dce6f0 0%, #c8d8e8 30%, #b8ccdb 60%, #d0dde8 100%);
+    background-image: url('../images/hero8.jpg');
+    background-size: cover;
+    background-position: center;
 }
 .sa-map-grid {
     position: absolute;
     inset: 0;
-    background-image:
-        linear-gradient(rgba(120, 140, 160, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(120, 140, 160, 0.1) 1px, transparent 1px);
-    background-size: 80px 80px;
+    background: rgba(255, 255, 255, 0.3);
     z-index: 1;
     pointer-events: none;
 }
